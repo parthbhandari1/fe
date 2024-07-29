@@ -1,0 +1,78 @@
+*{
+	margin: 0;
+	padding-right: 0;
+	box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1{
+	font-weight: 500;
+}
+
+a{text-decoration: none;}
+ul{list-style-type: none;}
+
+#changer{
+	margin: 5rem auto;
+	width: 60%;
+	padding: 5rem 3rem;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#changer h1{
+	margin: 1rem auto;
+}
+
+#changer input{
+	width: 315px;
+	padding: 1rem 1rem;
+	border: 3px solid #f1f1f1;
+	margin-right: 1rem;
+}
+
+#changer .content button{
+	padding: 1rem 2rem;
+	border: 3px solid #f1f1f1;
+	border-radius: 3%;
+	font-size: 1rem;
+	background: orange;
+	cursor: pointer;
+}
+
+#changer .colorTable{
+	margin: 2rem 0;
+	width: 50%;
+}
+
+#changer .colorTable p{
+	padding: 0.5rem 0;
+	border-bottom: 1px solid;
+}
+
+#changer .bigButton{
+	margin-top: 2rem;
+	width: 100%;
+	padding: 1rem;
+	border: 3px solid #f1f1f1;
+	border-radius: 3%;
+	font-size: 1rem;
+	background: orange;
+	cursor: pointer;
+	pointer-events: none;
+}
+
+/*.arrow .moving{
+	animation: move 15s linear;
+	position: relative;
+	font-size: 140%;
+	margin-left: 30rem;
+}
+
+@keyframes move{
+	0%{top: 0;}
+	25%{top: 10px;}
+	50%{top: 20px;}
+	75%{top: 30px;}
+	100%{top: 40px;}
+}*/

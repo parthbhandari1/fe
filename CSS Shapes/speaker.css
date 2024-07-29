@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.black-layer {
+	width: 500px;
+	height: 500px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.triangle {
+	width: 0px;
+	height: 0px;
+	border-top: 80px solid transparent;
+    border-right: 90px solid deepskyblue;
+    border-bottom: 80px solid transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tail {
+	height: 35px;
+    width: 50px;
+    background-color: deepskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 185px;
+}
+
+.semicircle1 {
+	height: 90px;
+	width: 140px;
+	background-color: transparent;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 100%;
+	border: 6px solid deepskyblue;
+	border-bottom: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	transform: rotate(90deg);
+	position: relative;
+	top: 0px;
+	left: 100px;
+}
+
+.semicircle2 {
+	height: 90px;
+	width: 110px;
+	background-color: transparent;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 100%;
+	border: 6px solid deepskyblue;
+	border-bottom: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	transform: rotate(360deg);
+	position: fixed;
+	top: -30px;
+	left: -30px;
+}
+
+.semicircle3 {
+	height: 140px;
+	width: 180px;
+	background-color: transparent;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 100%;
+	border: 6px solid deepskyblue;
+	border-bottom: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	transform: rotate(0deg);
+	position: fixed;
+	top: -40px;
+	left: -30px;
+}

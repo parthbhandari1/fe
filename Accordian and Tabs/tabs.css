@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding-right: 0;
+	box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1{
+	font-weight: 500;
+}
+
+a{text-decoration: none;}
+
+#tabbing{
+	width: 70%;
+	margin: 10rem auto;
+}
+
+#tabs .tab{
+    display:inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+}
+
+#tabs .tab.active {
+    background-color: rgb(62, 62, 214);
+    color: white;
+    padding: 10px;
+    border-radius:10px ;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.4);
+}
+
+#content .con{
+	display: none;
+	border: 2px solid;
+	padding: 1rem;
+	margin: 10px;
+	border-bottom-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+}
+
+#content .active{
+	display: block;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabs</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="tabs.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="tabbing">
+			<div id="tabs">
+				<a href="" class="tab active" id="react">React JS</a>
+				<a href="" class="tab" id="node">Node JS</a>
+				<a href="" class="tab" id="mongo">Mongo</a>
+				<a href="" class="tab" id="vue">Vue JS</a>
+			</div>
+
+			<div id="content">
+				<div class="con active" data-relation="react">
+					<h1>React JS</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<div class="con" data-relation="node">
+					<h1>Node JS</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<div class="con" data-relation="mongo">
+					<h1>Mongo</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<div class="con" data-relation="vue">
+					<h1>Vue JS</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+		let tabs = document.querySelectorAll(".tab");
+		tabs.forEach((current) => {
+			current.onclick = (e) => {
+				e.preventDefault();
+
+				tabs.forEach((current) => {
+					if (current.classList.contains("active"))
+					{
+						current.classList.remove("active");
+					}
+				})
+
+				current.classList.add("active");
+				let id = current.getAttribute("id");
+				let cons = document.querySelectorAll(".con");
+				cons.forEach((current) => {
+                    if(current.classList.contains("active"))
+                    {
+                        current.classList.remove("active");
+                    }
+                })
+
+				cons.forEach((current) => {
+					if (current.getAttribute("data-relation") === id) {
+						current.classList.add("active");
+					}
+				})
+			}
+		})
+
+	</script>
+
+</body>
+</html>

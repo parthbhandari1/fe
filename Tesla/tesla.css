@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding-right: 0;
+	box-sizing: border-box;
+    /*scroll-behavior: smooth;*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6, header ul a{
+	font-weight: 500;
+}
+
+a{text-decoration: none;}
+ul{list-style-type: none;}
+
+header{
+	position: fixed;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 52px;
+	padding: 0 2rem;
+}
+
+header ul{
+	display: flex;
+}
+
+header ul a{
+	color: black;
+	font-size: 95%;
+	padding: 0 1rem;
+}
+
+section{
+	background: url(images/model-3.jpg) no-repeat scroll center / cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+section:nth-of-type(2){
+	background: url(images/model-y.jpg) no-repeat scroll center / cover;
+}
+
+section:nth-of-type(3){
+	background: url(images/model-s.jpg) no-repeat scroll center / cover;
+}
+
+section:nth-of-type(4){
+	background: url(images/model-x.jpg) no-repeat scroll center / cover;
+}
+
+section:nth-of-type(5){
+	background: url(images/solar-panel.jpg) no-repeat scroll center / cover;
+}
+
+section:nth-of-type(6){
+	background: url(images/solar-roof.jpg) no-repeat scroll center / cover;
+}
+
+section:nth-of-type(7){
+	background: url(images/accessories.jfif) no-repeat scroll center / cover;
+}
+
+section .carName{
+	padding: 5.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section .carName h1{
+	font-size: 2.5rem;
+}
+
+section .carName p{
+	font-size: 95%;
+}
+
+section .carName p a{
+	text-decoration: underline;
+	color: black;
+}
+
+section .cta{
+	padding-top: 15rem;
+}
+
+section .cta a{
+	display: inline-block;
+	padding: 0.75rem 4.5rem;
+	border-radius: 25px;
+	background: rgba(23, 26, 32, 0.8);
+	color: white;
+	margin: 4rem 0.5rem;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+section .cta a:last-of-type{
+	background: rgba(244, 244, 244, 0.65);
+	color: black;
+}
+
+section .cta2 a{
+	display: inline-block;
+	padding: 0.75rem 5.5rem;
+	border-radius: 25px;
+	background: rgba(23, 26, 32, 1);
+	color: white;
+	margin: 4rem 0.5rem;
+	font-size: 75%;
+	font-weight: bold;
+	position: relative;
+    top: 105px;
+}
+
+section .dancing{
+	animation: dance 1.5s ease-in infinite;
+	position: relative;
+	font-size: 140%;
+}
+
+section footer ul{
+	display: flex;
+}
+
+section footer ul a{
+	color: #5c5e62;
+	font-size: 85%;
+	padding: 0 1rem;
+}
+
+@keyframes dance{
+	0%{top: 0;}
+	25%{top: 15%;}
+	50%{top: 0}
+	75%{top: 15%}
+	100%{top: 0}
+}

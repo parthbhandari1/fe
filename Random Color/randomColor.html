@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random Background Color</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="randomColor.css">
+</head>
+<body>
+	<h1>
+		<span id="color"></span>
+  		<button id="genNew">Generate Color</button>
+	</h1>
+
+	<script type="text/javascript">
+		let setBg = () => {
+  		let randomColor = Math.floor(Math.random()*16777215).toString(16);
+  		document.body.style.backgroundColor = "#" + randomColor;
+  		color.innerHTML = "#" + randomColor;
+		}
+
+		genNew.addEventListener("click", setBg);
+		setBg();
+	</script>
+</body>
+</html>

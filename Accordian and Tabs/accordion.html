@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Accordion</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="accordion.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="accordion">
+			<div class="accord">
+				<div class="accord-head">
+					<h2>Accordion Heading 1</h2>
+					<span class="fas fa-plus-circle"></span>
+				</div>
+				<div class="accord-body">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis fuga repellendus tempora consequuntur, ex reprehenderit corporis cupiditate quis assumenda voluptas nihil nesciunt minima totam, ratione? Iusto tempora, laudantium sequi aliquid.Aliquam possimus quod, aliquid, distinctio quisquam harum voluptate iste. Enim alias voluptas veritatis, ullam repellendus quas quibusdam eius ipsam voluptatem officia quasi dolore temporibus? Unde quisquam maxime nam numquam aut.</p>
+				</div>
+			</div>
+
+			<div class="accord">
+				<div class="accord-head">
+					<h2>Accordion Heading 2</h2>
+					<span class="fas fa-plus-circle"></span>
+				</div>
+				<div class="accord-body">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis fuga repellendus tempora consequuntur, ex reprehenderit corporis cupiditate quis assumenda voluptas nihil nesciunt minima totam, ratione? Iusto tempora, laudantium sequi aliquid.Aliquam possimus quod, aliquid, distinctio quisquam harum voluptate iste. Enim alias voluptas veritatis, ullam repellendus quas quibusdam eius ipsam voluptatem officia quasi dolore temporibus? Unde quisquam maxime nam numquam aut.</p>
+				</div>
+			</div>
+
+			<div class="accord">
+				<div class="accord-head">
+					<h2>Accordion Heading 3</h2>
+					<span class="fas fa-plus-circle"></span>
+				</div>
+				<div class="accord-body">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis fuga repellendus tempora consequuntur, ex reprehenderit corporis cupiditate quis assumenda voluptas nihil nesciunt minima totam, ratione? Iusto tempora, laudantium sequi aliquid.Aliquam possimus quod, aliquid, distinctio quisquam harum voluptate iste. Enim alias voluptas veritatis, ullam repellendus quas quibusdam eius ipsam voluptatem officia quasi dolore temporibus? Unde quisquam maxime nam numquam aut.</p>
+				</div>
+			</div>
+
+			<div class="accord">
+				<div class="accord-head">
+					<h2>Accordion Heading 4</h2>
+					<span class="fas fa-plus-circle"></span>
+				</div>
+				<div class="accord-body">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis fuga repellendus tempora consequuntur, ex reprehenderit corporis cupiditate quis assumenda voluptas nihil nesciunt minima totam, ratione? Iusto tempora, laudantium sequi aliquid.Aliquam possimus quod, aliquid, distinctio quisquam harum voluptate iste. Enim alias voluptas veritatis, ullam repellendus quas quibusdam eius ipsam voluptatem officia quasi dolore temporibus? Unde quisquam maxime nam numquam aut.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		let span = document.querySelectorAll(".accord-head span")
+		span.forEach((current) => {
+			current.onclick = (e) => {
+				if (e.target.parentElement.nextElementSibling.classList.contains("open")) {
+					e.target.parentElement.nextElementSibling.style.display = "none";
+					e.target.classList.add("fa-plus-circle");
+					e.target.classList.remove("fa-minus-circle");
+					e.target.parentElement.nextElementSibling.classList.remove("open");
+				}
+
+				else{
+
+					let body = document.querySelectorAll(".accord-body");
+					body.forEach((current) => {
+						if (current.classList.contains("open")) {
+							current.style.display = "none";
+							current.previousElementSibling.children[1].classList.add("fa-plus-circle");
+							current.previousElementSibling.children[1].classList.remove("fa-minus-circle");
+							current.classList.remove("open");
+						}
+					})
+
+					e.target.parentElement.nextElementSibling.style.display = "block";
+					e.target.classList.remove("fa-plus-circle");
+					e.target.classList.add("fa-minus-circle");
+					e.target.parentElement.nextElementSibling.classList.add("open");
+				}
+			}
+		})
+
+	</script>
+	
+</body>
+</html>

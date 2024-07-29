@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+.square {
+  height: 250px;
+  width: 250px;
+  background-color: #4CBB17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 600px;
+  top: 250px;
+  border-radius: 30% 30% 6% 6%;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%
+}
+
+.square2 {
+  height: 100px;
+  width: 100px;
+  background-color: #4CBB17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 675px;
+  top: 120px;
+  border-radius: 30% 30% 6% 6%;
+}
